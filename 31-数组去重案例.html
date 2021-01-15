@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  遍历旧数组元素，查询新数组，如新数组中无改元素，则将新元素添加到新数组，如新数组已有该元素，则不添加。 */
+        var a = ['a', 'b', 'c', 'a', 'z', 'b', 'c', 'z', 'd', 'f', 'd'];
+        function unique(arr) {
+            var newA = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newA.indexOf(arr[i]) == -1) {
+                    newA.push(arr[i]);
+                }
+            }
+            return newA;
+        }
+        b = unique(a);
+        console.log(b);
+        c = a.concat(b);
+        console.log(c);
+
+
+        var str = 'abcdefgabocbdogalkgjaohalkgjoasf';
+        var a = str.indexOf('o');
+        var arr = [a];
+        for (var i = 1; i !== -1; i = a) {
+            a = str.indexOf('o', i + 1);
+            arr.push(a);
+        }
+        console.log(arr);
+    </script>
+</body>
+
+</html>

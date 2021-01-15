@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: fixed;
+            height: 10px;
+            width: 10px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script>
+        // 获取小方块元素
+        var box = document.querySelector('.box');
+        // 绑定鼠标移动事件
+        document.addEventListener('mousemove', function (e) {
+            // 将事件对象的可视窗口y坐标给小方块的top，x坐标给left
+            box.style.top = (e.clientY - 10) + 'px';
+            box.style.left = (e.clientX - 10) + 'px';
+        })
+    </script>
+</body>
+
+</html>

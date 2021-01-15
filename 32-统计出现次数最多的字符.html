@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = 'abcdfabcdfglkajotieuwopgslgjhdsgjafufheiaiuriguwafgi';
+        // 1，创建对象，里面属性名为字符，值为字符出现的次数
+        var obj = {};
+        for (var i = 0; i < str.length; i++) {
+            var char = str.charAt(i);
+            if (obj[char]) {
+                obj[char]++;
+            } else {
+                obj[char] = 1;
+            }
+        }
+        console.log(obj);
+        // 2，遍历对象。
+        var max = 0;
+        var char = '';
+        for (k in obj) {
+            // k是从obj中取出的属性名
+            // obj【k】才是属性值
+            if (obj[k] > max) {
+                max = obj[k];
+                char = k;
+            }
+        }
+        console.log(max);
+        console.log(char);
+    </script>
+</body>
+
+</html>

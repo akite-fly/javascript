@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- continue关键字是跳出本次循环，执行下一次循环 -->
+    <!-- break关键字是结束整个循环 -->
+    <script>
+        var sum1 = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum1 += i;
+        }
+        console.log('1~100的和' + sum1);
+        var average = sum1 / 100;
+        console.log('1~100的平均值' + average);
+
+
+
+        var sum2 = 0;
+        for (var j = 2; j <= 100; j += 2) {
+            sum2 += j;
+        }
+        console.log('100以内偶数和' + sum2);
+
+
+
+
+        var sum3 = 0;
+        for (var h = 7; h <= 100; h += 7) {
+            sum3 += h;
+        }
+        console.log('100以内7的倍数的和' + sum3);
+
+
+
+        // 5行5列星星
+        var star1 = '';
+        for (var r = 1; r <= 5; r++) {
+            for (var c = 1; c <= 5; c++) {
+                star1 += '🌟';
+            }
+            star1 += '\n';
+        }
+        console.log(star1);
+
+        // 累增5行星星
+        var star2 = '';
+        for (var r1 = 1; r1 <= 5; r1++) {
+            for (var c1 = 1; c1 <= r1; c1++) {
+                star2 += '🌟';
+            }
+            star2 += '\n';
+        }
+        console.log(star2);
+        
+        // 99乘法表
+        var star3 = '';
+        for (var r2 = 1; r2 <= 9; r2++) {
+            for (var c2 = 1; c2 <= r2; c2++) {
+                star3 += c2 + 'x' + r2 + '=' + r2 * c2 + '\t';
+            }
+            star3 += '\n';
+        }
+        console.log(star3);
+
+        // 1~100累加，跳过个数为3的数
+        var sum4 = 0;
+        for (var i4 = 1; i4 <= 100; i4++) {
+            if (i4 % 10 !== 3) {
+                sum4 += i4;
+            }
+        }
+        console.log(sum4);
+    </script>
+
+</body>
+
+</html>

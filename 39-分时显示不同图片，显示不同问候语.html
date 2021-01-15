@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="" alt="">
+    <div></div>
+    <script>
+        var nowTime = new Date();
+        var div = document.querySelector('div')
+        console.log(nowTime.getHours());
+        if (nowTime.getHours() <= 12) {
+            div.innerHTML = '上午好';
+        }   else {
+            div.innerHTML = '下午好';
+        }
+    </script>
+</body>
+
+</html>

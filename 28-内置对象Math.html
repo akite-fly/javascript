@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 圆周率
+        console.log(Math.PI);
+        // 最大数
+        console.log(Math.max(1, '2', '3'));
+        // 最小数
+        console.log(Math.min(1, '2', '3'));
+        // 取绝对值
+        console.log(Math.abs(1));
+        console.log(Math.abs(-2));
+        console.log(Math.abs('-2'));
+        // 向下取整
+        console.log(Math.floor(9.99));
+        console.log(Math.floor(-9.1));
+        // 向上取整
+        console.log(Math.ceil(9.4));
+        console.log(Math.ceil(-9.4));
+        // 舍入取整
+        console.log(Math.round(-5.5));
+        console.log(Math.round(5.4));
+        // 取[0，1）之间的随机浮点数
+        console.log(Math.random());
+        // 得到两个数之间的随机整数
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        console.log(getRandom(10, 100));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 遍历打印所有数组元素
+        var week = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日', 678, 987, 064, 'hgfgd'];
+        for (var i = 0; i < week.length; i++) {
+            console.log(week[i]);
+        }
+
+        // 算出数组中的最大值 最小值
+        var arr = [1, 2, 3, 234, 452, 623, 76, 82, 46, 48, 25, 464755, 896536, 25, 253, 15, 7, 56];
+        var max = arr[0];
+        var min = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+
+        }
+        console.log(max);
+        console.log(min);
+
+
+
+        // 遍历数组 拼接为字符串
+        var words = ['a', 'b', 'c', 'd', 'e', 'f'];
+        var str = '';
+        for (var i = 0; i < words.length; i++) {
+            str += words[i] + '|';
+        }
+        console.log(str);
+
+        // 在数组最后新增元素
+        var word = ['a', 'b', 'c', 'd', 'e', 'f'];
+        word[word.length] = '1';
+        console.log(word);
+
+
+        // 将数字1~100写入一个数组
+        var arr = [];
+        for (var i = 0; i < 100; i++) {
+            arr[i] = i + 1;
+        }
+        console.log(arr);
+
+
+
+
+
+        // 反转数组内容
+        var arr = ['1', '2', '3', '4', '5', '6', '7'];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            newArr[arr.length - 1 - i] = arr[i];
+        }
+        console.log(newArr);
+    </script>
+</body>
+
+</html>

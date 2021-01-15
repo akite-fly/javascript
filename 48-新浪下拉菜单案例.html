@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #edeef0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .top {
+            width: 100%;
+            height: 40px;
+            border-top: 4px solid #ff8400;
+            border-bottom: 1px solid #ccc;
+            background-color: #fcfcfc;
+        }
+
+        .nav {
+            position: relative;
+            width: 800px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .t-l {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+        
+        }
+
+        .t-r {
+            position: absolute;
+            right: 0;
+            top: 0;
+       
+        }
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+        .t-l>ul {
+            height: 100%;
+        }
+        .t-l>ul>li {
+            float: left;
+            height: 100%;
+       
+        }
+
+        .t-l>ul>li>a {
+            display: inline-block;
+            height: 100%;
+            padding: 0px 8px 0px 8px;
+            text-align: center;
+            line-height: 40px;
+        }
+
+
+
+        .drop-down {
+            position: absolute;
+            right: 0;
+            top: 40px;
+            display: none;
+        }
+
+        .drop-down ul li {
+            width: 94px;
+            height: 36px;
+            border-width: 0 1px 1px 1px;
+            border-color: #ff8400;
+            border-style: solid;
+            text-align: center;
+        }
+
+        .drop-down ul li a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            line-height: 36px;
+            
+        }
+
+        .t-r {
+            height: 100%;
+        }
+        .t-r>a {
+            float: right;
+            padding: 0 8px 0 8px;
+            height: 100%;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <div class="top">
+        <div class="nav">
+
+
+
+            <div class="t-l clearfix">
+                <ul>
+                    <li><a href="#">设为首页</a></li>
+                    <li><a href="#">手机新浪网</a></li>
+                    <!-- app下载导航栏 -->
+                    <li id="app"> 
+                        <a href="#">移动客户端</a>
+                        <div class="drop-down">
+                            <ul>
+                                <li> <a href="#">新浪微博</a></li>
+                                <li> <a href="#">新浪微博</a></li>
+                                <li> <a href="#">新浪微博</a></li>
+                                <li> <a href="#">新浪微博</a></li>
+                                <li> <a href="#">新浪微博</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="t-r clearfix">
+                <a href="#">登录</a>
+                <a href="#">微博</a>
+                <a href="#">博客</a>
+                <a href="#">邮箱</a>
+                <a href="#">网站导航</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <!--  -->
+    <script>
+        var app = document.getElementById('app');
+        var appNav = document.querySelector('.drop-down');
+        app.onmouseover = function () {
+            appNav.style.display = 'block';
+        }
+        app.onmouseout = function () {
+            appNav.style.display = 'none';
+
+        }
+    </script>
+</body>
+
+</html>

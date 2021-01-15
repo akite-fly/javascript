@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式属性操作</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+    <script>
+        // 1,获取元素
+        var div = document.querySelector('div');
+        // 2,绑定事件  执行操作
+        div.onclick = function () {
+            // 注意 这里的样式采取驼峰命名法
+            // js里的样式是行内样式，权重较高
+            div.style.backgroundColor = 'purple'; 
+            this.style.width = '400px';
+        }
+    </script>
+</body>
+
+</html>

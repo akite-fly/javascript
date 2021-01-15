@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .table {
+            margin: 80px auto;
+            width: 700px;
+        }
+
+        .tt {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #ccc;
+            background-color: #ccc;
+        }
+
+        .tt ul li {
+            float: left;
+            height: 100%;
+            padding: 0 10px;
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        .tt ul li[class='']:hover {
+            color: #e4393c;
+        }
+
+        .item {
+            display: none;
+        }
+
+        .cur-click {
+            background-color: #e4393c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table">
+        <div class="tt">
+            <ul>
+                <li class="cur-click">商品介绍</li>
+                <li class="">规格与包装</li>
+                <li class="">售后保障</li>
+                <li class="">商品评价</li>
+                <li class="">手机社区</li>
+            </ul>
+        </div>
+        <div class="tb">
+            <div class="item" style="display: block;">商品介绍</div>
+            <div class="item">规格与包装</div>
+            <div class="item">售后保障</div>
+            <div class="item">商品评价</div>
+
+            <div class="item">手机社区</div>
+        </div>
+    </div>
+
+
+    <script>
+        var lis = document.querySelector('.tt').querySelectorAll('li');
+        var items = document.querySelector('.tb').querySelectorAll('.item');
+
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].setAttribute('index', i);
+            lis[i].onclick = function () {
+
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                    items[i].style.display = 'none';
+                }
+                this.className = 'cur-click';
+                var index = this.getAttribute('index');
+                items[index].style.display = 'block';
+            }
+        }
+    </script> 
+</body>
+
+</html>

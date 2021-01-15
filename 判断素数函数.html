@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var num1 = prompt('请输入您要判断的数');
+        // function prime(num1) {
+        //     var primeNumber = [];
+        //     for (var i = 0; i < primeNumber.length; i++) {
+        //         if (num1 == primeNumber[i]) {
+        //             return '这个数是素数';
+        //         }
+        //     }
+        // }
+        // alert()
+
+
+        var num1 = Number(prompt('请输入您要判断的正整数'));
+        function prime(num1) {
+            // flag用于记录从2开始到这个数本身之间有没有一个数可以被它整除
+            // 有则flag为false，无则，flag为true。
+            var flag = true;
+            for (var i = 2; i < num1; i++) {
+                if (num1 % i == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            // 只有flag为true 并且这个数不等于1的情况下 这个数才是素数
+            if (flag && num1 != 1) {
+                return '这个数是素数';
+            } else {
+                return '这个数不是素数';
+            }
+        }
+        alert(prime(num1));
+    </script>
+</body>
+
+</html>

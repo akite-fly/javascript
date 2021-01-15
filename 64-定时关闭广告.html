@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad {
+            width: 100px;
+            height: 400px;
+            background-color: pink;
+            transition: all 5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ad">我是广告</div>
+
+    <script>
+        var ad = document.querySelector('.ad');
+        // 1秒后关闭广告  此定时器只调用一次
+        setTimeout(function () {
+            ad.style.display = 'none';
+        }, 1000)
+        // 每隔一段时间  就调用函数
+        setInterval(function () {
+            ad.style.display = 'block';
+        }, 5000);
+        setInterval(function () {
+            ad.style.display = 'none';
+        }, 7000);
+
+    </script>
+</body>
+
+</html>

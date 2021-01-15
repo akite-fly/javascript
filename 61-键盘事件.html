@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // onkeyup 键盘按键松开时触发
+        document.addEventListener('keyup', function (e) {
+            console.log('松开键盘');
+        })
+        // onkeydown 键盘按键按下时触发 一直按着只触发一次 跟下面的事件比先执行
+        document.addEventListener('keydown', function (e) {
+            console.log('按下键盘1');
+        })
+        // onkeypress 键盘按键按下时触发 一直按着一直触发（注：不能识别功能键 如ctrl shift 方向键等）相较于上面的事件后执行
+        document.addEventListener('keypress', function (e) {
+            console.log('按下键盘2');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 借助临时中间变量实现两个变量值的交换
+        var apple1 = '青苹果',
+            apple2 = '红苹果',
+            // 先把一个值给中间变量
+            temp = apple1,
+            // 再把要交换的另一个变量值赋给这个变量
+            apple1 = apple2,
+            // 再把中间变量的值给另一个值
+            apple2 = temp;
+        console.log(apple1)
+        console.log(apple2)
+        console.log(isNaN(apple1));
+        var str1 = "外单内双，\n外双‘内单’"
+        console.log();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

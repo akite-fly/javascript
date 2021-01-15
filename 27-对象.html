@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用字面量创建对象
+        var obj = {
+            name: 'wangwang',
+            age: 4,
+            sayHello: function () {
+                console.log('Hello');
+            }
+        }
+        console.log(obj.name);
+        console.log(obj['name']);
+        console.log(obj.age);
+        obj.sayHello();
+
+        // 通过new object 创建新对象
+        var obj2 = new Object();
+        obj2.name = '鸣人';
+        obj2.sex = 'man';
+        obj2.age = 19;
+        obj2.skill = function () {
+            console.log('影分身术');
+        }
+
+
+        // 通过构造函数创建对象
+        function Obj(uname, type, blood, attack) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function () {
+                console.log(attack);
+            }
+        }
+        var hero = new Obj('年龄', '类型', '数字', '函数');
+        hero.attack();
+        console.log(hero.name);
+
+
+        // 通过for in遍历对象
+        for (var k in hero){
+            console.log(k);
+            console.log(hero[k]);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead {
+            background-color: #ccc;
+        }
+
+        table {
+            margin: 40px auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 4px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>指标</th>
+                <th>本月</th>
+                <th>累计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script>
+        //  把多个对象数据 存到一个数组里 数组里可以存放任何类型的数据
+        var datas = [{
+            name: '铁',
+            tons: '7',
+            all_tons: '922',
+        }, {
+            name: '铜',
+            tons: '6.7',
+            all_tons: '22.3',
+        }, {
+            name: '锌',
+            tons: '45',
+            all_tons: '52.5',
+        }, {
+            name: '镍',
+            tons: '9',
+            all_tons: '34.4',
+        }];
+
+        // 在tbody里添加行元素
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < datas.length; i++) {
+            // 创建行
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+
+            // 在行里创建单元格 单元格数量对应对象的属性数量
+            for (var k in datas[i]) {// for in遍历对象 取出的k是属性名
+                // 创建单元格
+                var td = document.createElement('td');
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+            }
+
+            // 创建操作单元格
+            var td = document.createElement('td');
+            td.innerHTML = '<a href="javascript:;">删除</a>';
+            tr.appendChild(td);
+        }
+
+        // 删除事件
+        var as = tbody.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    </script>
+</body>
+
+</html>

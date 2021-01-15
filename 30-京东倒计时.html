@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countDown(time) {
+            var nowTime = + new Date();//当前总毫秒数
+            var inputTime = + new Date(time);//用户输入毫秒数
+            var times = (inputTime - nowTime) / 1000;
+            var d = parseInt(times / 60 / 60 / 24);//天
+            d = d < 10 ? '0' + d : d;
+            var h = parseInt(times / 60 / 60 % 24);//小时
+            h = h < 10 ? '0' + h : h;
+            var m = parseInt(times / 60 % 60);//分钟
+            m = m < 10 ? '0' + m : m;
+            var s = parseInt(times % 60);//秒
+            s = s < 10 ? '0' + s : s;
+            return d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+
+
+
+
+        // 此刻的时间
+        var a = new Date();
+        console.log(a);
+        console.log(countDown('2021-01-11 19:19:19'));
+        
+    </script>
+
+</body>
+
+</html>

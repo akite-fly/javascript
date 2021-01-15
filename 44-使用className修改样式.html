@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            background-color: pink;
+        }
+
+        .c1 {
+            width: 300px;
+            height: 300px;
+            margin: 300px auto;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+
+    <script>
+        // 获取元素
+        var div = document.querySelector('div');
+        // 设置判断变量 每次点击 都会使条件变量发生变化
+        var flag = false;
+        // 注册事件  添加处理程序
+        div.onclick = function () {
+            if (flag === false) {
+                // 透过修改类名 改变元素样式 若想保留原来的类名 
+                // 可一起写上，类名与类名之间用空格隔开
+                this.className = 'c1';
+                flag = !flag;
+            } else {
+                this.className = '';
+                flag = !flag;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

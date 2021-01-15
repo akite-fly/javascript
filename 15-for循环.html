@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*   for (初始化变量; 条件表达式; 操作表达式) {
+              循环体;
+              
+          } */
+      
+
+
+        // 求1~100之间的整数累加和
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        console.log(sum);
+
+        // 求1-100之间的偶数和
+        var sumEven = 0;
+        for (var i = 2; i <= 100; i += 2) {
+            sumEven += i;
+        }
+        console.log(sumEven);
+
+        // 求1-100之间的奇数和
+        var sumOdd = 0;
+        for (var i = 1; i <= 100; i += 2) {
+            sumOdd += i;
+        }
+        console.log(sumOdd);
+
+        // 求1-100之间的所有能被三整除的数字和
+        var sumResult = 0;
+        for (var i = 3; i <= 100; i += 3) {
+            sumResult += i;
+        }
+        console.log(sumResult);
+    </script>
+</body>
+
+</html>

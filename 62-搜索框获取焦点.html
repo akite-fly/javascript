@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+            width: 300px;
+            height: 40px;
+            margin: 80px auto;
+            outline: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="search">
+    <script>
+        // 获取元素
+        var search = document.querySelector('input');
+        // 当s键弹起时 触发得到焦点事件
+        document.addEventListener('keyup', function (e) {
+            console.log(e.keyCode);
+            if (e.keyCode === 83) {
+                search.focus();
+            }
+
+        })
+    </script>
+</body>
+
+</html>

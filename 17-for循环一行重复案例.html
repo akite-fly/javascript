@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        // 外层for循环控制行数 内层for循环控制列数
+        for (var a = 1; a <= 5; a++) {
+            var star = '';
+            for (var i = 1; i <= 5; i++) {
+                star += '⭐';
+            }
+            console.log(a + star);
+        }
+
+        
+
+        for (var b = 5; b >= 1; b--) {
+            var sun = '';
+            for (var c = 1; c <= b; c++) {
+               sun += '🌝'
+            }
+            console.log(sun);
+        }
+
+
+        var mon = ''
+        for (var e = 1; e <= 10; e++) {
+            mon += '🌛'
+            console.log(mon);
+        }
+    </script>
+</body>
+
+</html>

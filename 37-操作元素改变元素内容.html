@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <div>当前时间</div>
+    <p class="time1">当前时间</p>
+    <p class="time2">当前时间</p>
+    <script>
+        // 当我们点击按钮时div的内容会出现变化
+        // 1,获取元素
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        // 2,绑定事件
+        btn.onclick = function () {
+            div.innerText = getDate();
+        }
+
+
+        function getDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var day = date.getDay();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            return year + '-' + month + '-' + dates + '-' + arr[day];
+        }
+        // 我们也可以让时间直接显示出来
+        var p1 = document.querySelector('.time1');
+        // 1,用innerText不能识别html标签  去除空格和换行
+        p1.innerHTML = getDate();
+        // 2，innerHTML可以识别html标签   w3c推荐标准  保留空格和换行  使用最多
+        var p2 = document.querySelector('.time2');
+        p2.innerHTML = '<strong>时间</strong>';
+        // 3,这两个属性是可以读写的，可以获取元素里的内容
+        console.log(p2.innerText);
+        console.log(p2.innerHTML);
+    </script>
+</body>
+
+</html>

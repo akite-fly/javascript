@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 总额total
+        // 取出get out
+        // 存款deposit
+        // 退出quit
+        // 数字功能num
+        var total = 100;
+        for (var quit = ''; quit !== 'quit';) {
+            var num = prompt('请输入您需要办理的业务\n1，查询余额\n2，取钱\n3，存钱\n4，退出')
+            switch (num) {
+                case '1':
+                    alert('您当前的余额为' + total + '元');
+                    continue;
+                case '2':
+                    var moneyGetOut = prompt('您当前的余额为' + total + '元\n请输入您要取出的钱数') - 0;
+                    total -= moneyGetOut;
+                    alert('成功取出' + moneyGetOut + '元\n您当前的余额为' + total + '元');
+
+                    continue;
+                case '3':
+                    var deposit = prompt('您当前的余额为' + total + '元\n请输入您要存入的钱数') - 0;
+                    total += deposit;
+                    alert('成功存入' + deposit + '元\n您当前的余额为' + total + '元');
+                    continue;
+                case '4':
+                    var quit = 'quit';
+                    alert('退出成功');
+                    continue;
+                default:
+                    alert('您的输入有误,');
+                    continue;
+            }
+        }
+    </script>
+</body>
+
+</html>

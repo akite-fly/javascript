@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .miaosha {
+            width: 250px;
+            height: 250px;
+            margin: 40px auto;
+            background-color: #e3281d;
+            text-align: center;
+        }
+
+        span {
+            margin-top: 200px;
+            margin-left: 10px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #2f3430;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="miaosha">
+        <span class="hour"></span>
+        <span class="minute"></span>
+        <span class="second"></span>
+    </div>
+
+    <script>
+        var hour = document.querySelector('.hour');
+        var minute = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        // 目标时间
+        var target_time = +new Date('2020-12-28 18:30:00');
+
+        // 先执行一次函数 弥补定时器第一次延时 出现的空白期
+        times();
+
+        // 每个半秒刷新一次时间
+        setInterval(times, 500);
+
+        // times函数自动运算与目标时间的倒计时  并自动给元素内容赋值
+        function times() {
+
+            // 获得此刻时间
+            var date = +new Date();
+
+            // 计算此刻与目标时刻相差的秒数
+            var s = Math.floor((target_time - date) / 1000);
+
+            var t_second = s % 60; //秒
+            if (t_second < 10) {
+                t_second = '0' + t_second;
+            }
+            var t_minute = Math.floor(s / 60) % 60; //分
+            if (t_minute < 10) {
+                t_minute = '0' + t_minute;
+            }
+            var t_hour = Math.floor(s / 60 / 60) % 12; //时
+            if (t_hour < 10) {
+                t_hour = '0' + t_hour;
+            }
+            hour.innerHTML = t_hour + '';
+            minute.innerHTML = t_minute + '';
+            second.innerHTML = t_second + '';
+        }
+    </script>
+</body>
+
+</html>

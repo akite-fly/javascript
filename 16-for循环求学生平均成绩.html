@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num1 = prompt('请输入班级人数') - 0;
+        var result = 0;
+        var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= num1; i++) {
+            result = prompt('请输入第' + i + '位学生的成绩') - 0;
+            sum += result;
+        }
+        average = sum / num1;
+        alert('你班的总成绩为' + sum);
+        alert('你班的平均成绩为' + average);
+    </script>
+</body>
+
+</html>

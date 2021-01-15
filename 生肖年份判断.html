@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (var i = true; i != false;) {
+            year = prompt('请输入年份查生肖\n如需关闭请输入0');
+            if (year != 0) {
+                year -= 1998;
+                switch (year % 12) {
+                    case 0:
+                        alert('这一年是虎年')
+                        break;
+                    case 1:
+                        alert('这一年是兔年')
+                        break;
+                    case 2:
+                        alert('这一年是龙年')
+                        break;
+                    case 3:
+                        alert('这一年是蛇年')
+                        break;
+                    case 4:
+                        alert('这一年是马年')
+                        break;
+                    case 5:
+                        alert('这一年是羊年')
+                        break;
+                    case 6:
+                        alert('这一年是猴年')
+                        break;
+                    case 7:
+                        alert('这一年是鸡年')
+                        break;
+                    case 8:
+                        alert('这一年是狗年')
+                        break;
+                    case 9:
+                        alert('这一年是猪年')
+                        break;
+                    case 10:
+                        alert('这一年是鼠年')
+                        break;
+                    case 11:
+                        alert('这一年是牛年')
+                        break;
+                    case -1:
+                        alert('这一年是牛年')
+                        break;
+                    case -2:
+                        alert('这一年是鼠年')
+                        break;
+                    case -3:
+                        alert('这一年是猪年')
+                        break;
+                    case -4:
+                        alert('这一年是狗年')
+                        break;
+                    case -5:
+                        alert('这一年是鸡年')
+                        break;
+                    case -6:
+                        alert('这一年是猴年')
+                        break;
+                    case -7:
+                        alert('这一年是羊年')
+                        break;
+                    case -8:
+                        alert('这一年是马年')
+                        break;
+                    case -9:
+                        alert('这一年是蛇年')
+                        break;
+                    case -10:
+                        alert('这一年是龙年')
+                        break;
+                    case -11:
+                        alert('这一年是兔年')
+                        break;
+
+                    default:
+                        alert('计算异常')
+                        break;
+                }
+            } else {
+                i = false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

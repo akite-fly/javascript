@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <ul>
+        <li>绿肥红瘦1</li>
+        <li>绿肥红瘦2</li>
+        <li>绿肥红瘦3</li>
+        <li>绿肥红瘦4</li>
+        <li>绿肥红瘦5</li>
+        <li>绿肥红瘦6</li>
+    </ul>
+    <ol>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+    </ol>
+    <script>
+        // 1,通过标签名获取元素
+        // 返回的是元素对象的集合，以伪数组的形式存储的
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(typeof lis);
+        console.log(lis[0]);
+        console.dir(lis)
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+
+
+        // 2，通过类名获取元素  H5新增有兼容性问题
+        var b = document.getElementsByClassName('box');
+        console.log(b);
+        console.log(typeof b);
+        // 3，通过选择器返回第一个元素对象   H5新增
+        var firstBox = document.querySelector('.box');
+        console.log(firstBox);
+        // 4,返回指定选择器的所有元素
+        var allBox = document.querySelectorAll('.box');
+        console.log(allBox);
+
+    </script>
+</body>
+
+</html>

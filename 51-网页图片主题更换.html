@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+           
+        }
+
+        body {
+            width: 100%;
+            margin: 0 auto;
+            background: url(images/beijing1.jpg) no-repeat 0 0 scroll;
+            background-size: 100%;
+        }
+
+        .theme {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .theme li {
+            display: inline-block;
+            width: 100px;
+            list-style: none;
+
+        }
+
+        .theme li img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="theme">
+        <li><img src="images/beijing1.jpg" alt=""></li>
+        <li><img src="images/beijing2.jpg" alt=""></li>
+        <li><img src="images/beijing3.jpg" alt=""></li>
+        <li><img src="images/beijing4.jpg" alt=""></li>
+    </ul>
+
+
+    <script>
+        // 获取ul里的 所有 图片元素
+        var imgs = document.querySelector('.theme').querySelectorAll('img');
+        // console.log(imgs);
+        // 为每个图片 绑定 点击事件
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                // 修改body 背景
+                document.body.style.background = 'url(' + this.src + ') no-repeat 0 0 scroll';
+                document.body.style.backgroundSize = '100%'; 
+            }
+
+        }
+    </script>
+</body>
+
+</html>

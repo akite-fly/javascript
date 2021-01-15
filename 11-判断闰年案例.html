@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 闰年是指能 被4整除不能被100整除的年份 和能 被400整除的年份 
+        var year = prompt(' 请输入您要查询的年份');
+        if (year % 4 == 0 && year % 100 != 0) {
+            alert(year + '年是普通闰年')
+        } else if (year % 400 == 0) {
+            alert(year + '年是世纪闰年')
+        } else {
+            alert(year + '年是平年')
+        }
+
+        // 三元表达式
+        var a = 3 > 4 ? 3 : 4;
+        console.log(a);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Date是构造函数 需要用new创建
+        var a = new Date();
+        console.log('年：' + a.getFullYear());
+        console.log('月：' + a.getMonth());
+        console.log('日：' + a.getDate());
+        console.log('星期：' + a.getDay());
+        console.log('时：' + a.getHours());
+        console.log('分：' + a.getMinutes());
+        console.log('秒：' + a.getSeconds());
+
+        // 距离1970年1月1日的毫秒数  方法一 + new Date
+        console.log('距1970年的毫秒数：' + + new Date);
+
+        // 方法二  getTime()
+        console.log( a.getTime());
+        // 方法三 valueof()
+        console.log(a.valueOf());
+        // 方法四 Date.now()
+        console.log(Date.now(a));
+
+    </script>
+</body>
+
+</html>

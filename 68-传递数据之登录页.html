@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- form 的 action属性 规定当提交表单时，向何处发送表单数据。 -->
+    <form action="69-传递数据之首页.html">
+        <!-- input 里的 name 是这个输入框的名字 -->
+        用户名：<input type="text" name="uname">
+        <input type="submit" value="登录">
+    </form>
+    <div>请输入用户名，点击登录进入首页</div>
+    <button>前进</button>
+
+
+    <script>
+        // 定义后退按钮
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            // history对象 可与浏览器历史记录进行交互
+            // history.back() 相当于后退按钮 执行后退操作
+            // history.forward() 相当于前进按钮 执行前进操作
+
+            // go()里面的参数 1为前进 -1为后退。
+            history.go(1);
+        })
+    </script>
+
+</body>
+
+</html>

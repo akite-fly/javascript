@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击跳转</button>
+    <div></div>
+
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.addEventListener('click', function () {
+            var n = 5;
+            var t = setInterval(function () {
+                if (n === 0) {
+                    // 方法一 修改href
+                    // location.href = 'http://www.baidu.com';
+
+                    // 方法二 assign 重定向当前页面 记录历史可回退
+                    location.assign('http://www.baidu.com');
+
+                    // 方法三 replace 替换当前页面 不记录历史不可回退
+                    // location.replace('http://www.baidu.com');
+
+                    // reload方法 重新加载页面 相当于刷新按钮 如里面参数为true相当于强制刷新
+                    // location.reload();
+
+                    clearInterval(t);
+                } else {
+                    div.innerHTML = '还有' + n + '秒就会跳到新网页';
+                    n--;
+                }
+            }, 1000)
+        })
+        // navigation对象包含了很多关于浏览器的信息，我们常用的userAgent，该属性可以返回客户机发送服务器的user-agent头部的值。
+        // 可用于判断用户设备，跳转不同页面。
+        console.log(navigator);
+    </script>
+</body>
+
+</html>

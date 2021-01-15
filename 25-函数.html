@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数就是封装了一块可重复执行的代码块
+        function getSum(a,b) {
+            var sum = 0;
+            for (var i = a; i <= b; i++) {
+                sum += i;
+            }
+            console.log(sum);
+            // return 终止函数 并返回后面的值 只能返回一个值 当需要返回多个值时 可返回数组形式
+            return sum;
+            // 函数没有return则返回undefined
+        }
+        var a = getSum(24,300);
+        console.log(a);
+    </script>
+</body>
+
+</html>

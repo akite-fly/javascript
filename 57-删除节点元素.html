@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            width: 600px;
+            margin-top: 20px;
+            text-indent: 2em;
+            background-color: skyblue;
+            color: black;
+            line-height: 2.5;
+        }
+
+        li>button {
+            float: right;
+            margin-top: 10px;
+        }
+
+        textarea {
+            vertical-align: bottom;
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="80" rows="6"></textarea>
+    <button>发布</button>
+    <ul>
+        <li>wwwwwwwwwww<button>删除</button></li>
+        <li>wwwwwwwwwww<button>删除</button></li>
+    </ul>
+
+
+    <script>
+        // 1 获取父元素 
+        var ul = document.querySelector('ul');
+        // 获取按钮元素
+        var btn = document.querySelector('button');
+        //  获取文本域元素
+        var text = document.querySelector('textarea');
+
+        // 2 为发布按钮添加点击事件
+        btn.onclick = function () {
+            if (text.value === '') {
+                // 文本框为空的情况
+                text.placeholder = '请输入内容';
+            } else {
+                // 文本框不为空的情况
+                // 创建元素 把它添加到父元素中
+                var li = document.createElement('li');
+                li.innerHTML = text.value + "<button>删除</button>";
+                // 父元素里添加子元素 方法一  在父元素里面的 后面添加子元素
+                // ul.appendChild(li);
+                // 父元素里添加子元素 方法二  在父元素里 的前面 添加子元素
+                ul.insertBefore(li, ul.children[0]);
+
+                // 发出留言后将文本框清空
+                text.value = '';
+                text.placeholder = '';
+            }
+            // 获取所有的 li里面的按钮
+            var del_btn = document.querySelector('ul').querySelectorAll('button');
+            // 为每个按钮绑定事件
+            for (var i = 0; i < del_btn.length; i++) {
+                del_btn[i].onclick = function () {
+                    // 移除此按钮的父元素 ul里的子元素li
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

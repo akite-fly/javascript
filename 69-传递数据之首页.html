@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <button>后退</button>
+    <script>
+
+        // location.search 返回url的查询部位 ？及后面的键值对
+        var params = location.search.substr(1);
+        console.log(params);
+
+        // 把键值对通过等于号分隔开 并转成数组
+        var arr = params.split('=');
+        console.log(arr);
+
+        // 把数组中的序号一取出赋值给div 也就是把键值对中的值取了出来
+        var div = document.querySelector('div');
+        div.innerHTML = arr[1] + '欢迎您';
+
+        // 后退按钮
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',function () {
+            // history.back()是后退 history.forward()是前进
+            // history.go(参) 参数写-1为后退 写1为前进
+            history.go(-1);
+        })
+    </script>
+</body>
+
+</html>

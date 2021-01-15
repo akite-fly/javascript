@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input {
+            outline: none;
+            color: #ccc;
+        }
+        /* 先定义好两个类名  表示得到焦点后的样式 */
+        .tt {
+            border: 1px solid pink;
+            color:black;
+        }
+
+        .pw {
+            border: 1px solid pink;
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" value="邮箱/ID/手机号" id="tt">
+    <input type="text" value="密码" id="pw">
+
+
+
+    <script>
+        // 1 获取元素
+        var tt = document.querySelector('#tt');
+        var pw = document.querySelector('#pw');
+        // 添加用户名框 获取焦点后事件
+        tt.onfocus = function () {
+            if (this.value === '邮箱/ID/手机号') {
+                this.value = '';
+
+            }
+            this.className = 'tt';
+
+        }
+        // 用户名框 失去焦点后 事件
+        tt.onblur = function () {
+            if (this.value === '') {
+                this.value = '邮箱/ID/手机号';
+
+            }
+            this.className = '';
+        }
+        // 密码框 获得焦点 后 事件
+        pw.onfocus = function () {
+            if (this.value === '密码') {
+                this.type = 'password';
+                this.value = '';
+                
+            }
+            this.className = 'pw';
+        }
+        // 密码框 失去焦点 后 事件
+        pw.onblur = function () {
+            if (this.value === '') {
+                this.type = 'text';
+                this.value = '密码';
+                
+            }
+            this.className = '';
+        }
+
+    </script>
+</body>
+
+</html>
